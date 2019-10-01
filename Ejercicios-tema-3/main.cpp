@@ -37,11 +37,30 @@ tCalificacion getCalificacion(int nota){
     return matriculaHonor;
 }
 
+string calificacionToString(tCalificacion calif) {
+    switch (calif) {
+        case noPresentado:
+            return "no presentado";
+        case suspenso:
+            return "suspenso";
+        case aprobado:
+            return "aprobado";
+        case notable:
+            return "notable";
+        case sobresaliente:
+            return "sobresaliente";
+        case matriculaHonor:
+            return "matricula de honor";
+    }
+}
+
 int ejercicio2() {
     int nota1 = 6;
     int nota2 = 8;
     tCalificacion calif1 = getCalificacion(nota1);
     tCalificacion calif2 = getCalificacion(nota2);
+    cout << "calif1" << calificacionToString(calif1);
+    cout << "calif2" << calificacionToString(calif2);
     return 0;
 }
 
